@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-docs-samples-pubsub",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Google Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/googleapis/nodejs-pubsub.git"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "scripts": {
+    "ava": "ava -T 20s --verbose system-test/*.test.js",
+    "cover": "nyc --reporter=lcov --cache ava -T 20s --verbose test/*.test.js system-test/*.test.js && nyc report",
+    "test": "repo-tools test run --cmd npm -- run cover"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "0.16.4",
+    "yargs": "10.0.3",
+    "bindings": "1.3.0",
+    "commander": "^2.13.0",
+    "debug": "^3.1.0",
+    "nan": "^2.6.2",
+    "prebuild-install": "^2.4.1",
+    "promirepl": "^1.0.1",
+    "prompt-list": "^3.1.2",
+    "safe-buffer": "^5.0.1",
+    "serialport": "^6.1.0"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "2.0.11",
+    "ava": "^0.22.0",
+    "nyc": "^11.3.0",
+    "proxyquire": "^1.7.10",
+    "sinon": "^4.2.2",
+    "uuid": "^3.1.0",
+    "bluebird": "^3.5.0",
+    "chai": "^4.0.2",
+    "chai-subset": "^1.5.0",
+    "conventional-changelog-cli": "^1.3.2",
+    "docdash": "^0.4.0",
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.4",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.0.0",
+    "prebuild": "^7.4.0"
+  }
+}
